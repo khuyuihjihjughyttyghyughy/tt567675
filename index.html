@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy Birthday, My Love!</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, <span id="name">[my princess ]</span>!</h1>
+        <p class="message">On your special day, I want to remind you how much you mean to me. You light up my life with your smile, your kindness, and your love. I hope today is as beautiful as you are. 💖</p>
+
+        <div class="heart-container">
+            <div class="heart"></div>
+        </div>
+
+        <button class="btn" onclick="showSurprise()">Click for a Surprise!</button>
+
+        <div id="surprise" class="hidden">
+            <h2>Here's a Little Poem for You:</h2>
+            <p class="poem">
+                Roses are red,<br>
+                Violets are blue,<br>
+                My world is brighter,<br>
+                Because of you.<br><br>
+                Happy Birthday, my love!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffcccb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 3em;
+    color: #e63946;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+}
+
+.heart-container {
+    margin: 30px 0;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    left: 50px;
+    top: 0;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #d62828;
+}
+
+#surprise {
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.poem {
+    font-size: 1.4em;
+    color: #555;
+    margin-top: 20px;
+}
+</style>

@@ -3,152 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Happy Birthday, My Love!</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Happy Birthday, [my love]!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Balloons background -->
+    <div class="balloons" id="balloonBackground"></div>
+
+    <!-- Main Container -->
     <div class="container">
-        <h1>Happy Birthday, <span id="name">[my princess ]</span>!</h1>
-        <p class="message">On your special day, I want to remind you how much you mean to me. You light up my life with your smile, your kindness, and your love. I hope today is as beautiful as you are. 💖</p>
+        <!-- Birthday Header -->
+        <header class="header">
+          
+                  <h1> 🎉 Happy Birthday, [my princess] 🎉</h1>
+                
+        
+        </header>
 
-        <div class="heart-container">
-            <div class="heart"></div>
-        </div>
-
-        <button class="btn" onclick="showSurprise()">Click for a Surprise!</button>
-
+        <!-- Surprise Section -->
+        <section class="surprise">
+            <h2>🎈 A Special Surprise Just for You! 🎈</h2>
+              <!-- Hidden Surprise Section -->
+        <button class="btn" onclick="revealSurprise()">Click for Your Birthday Surprise!</button>
         <div id="surprise" class="hidden">
-            <h2>Here's a Little Poem for You:</h2>
-            <p class="poem">
-                Roses are red,<br>
-                Violets are blue,<br>
-                My world is brighter,<br>
-                Because of you.<br><br>
-                Happy Birthday, my love!
-            </p>
-        </div>
+
+        </section>
+
+        <!-- Birthday Wishes -->
+        <section class="wishes">
+            <h2>💖 Birthday Wishes 💖</h2>
+            <p><p class="letter">
+              happy birthday My princess 😌<br><br>
+                🥳On your special day, I just want you to know how much you mean to me. Every moment with you is like a beautiful dream🥰 that I never want to wake up from. You've filled my life with joy, love, and laughter, embarrassment 😂 and I'm eternally grateful for that .<br><br>
+                Happy Birthday🥳🎈, my love! i have so many beautiful memories with you 🎈.<br><br>
+            I love you more than words can say. 💖 and  i will always Love  🙃,<br>
+                        </p! 🎉✨💫</p>
+        </section>
+
+       <h2> A poem for you🥳</h2>
+       <p>Today’s a day for laughter,
+        <br>
+        A day just made for you,
+        For all the dreams you're after,
+        <br>
+        May each one come true. 🎂🎈
+        <h3>here is one more for you cause i love you more 😂 </h3>
+
+ <p>Happy Birthday, my darling,
+    <br>
+    Here’s to us, forever true,
+    For every wish you're dreaming,
+    <br>
+    I’m wishing it for you. 🎉💞
+
+
+
+    </p>
+
+        </p>
+        <p></p>
+
+
+
+
+
+<!-- Hidden Surprise Section -->
+<button class="btn" onclick="revealSurprise()">Click for Your Birthday Surprise!</button>
+<div id="surprise" class="hidden">
+    <h2>🥳A Special song for you🎁:</h2>
+    <p>plz click on the spotify logo cause your boyfriend is not that smart to creat a song player 😂 </p>
+    <p class="letter">
+
+
+
+
+        
+        <a href="https://open.spotify.com/track/0OFibcplH8IVfjsGIt7RwO?si=6lmBMCs_RPqLmVuwnnMV6A&utm_source=copy-link"><img src ="data:image/png;base64,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" height="40px" width="40px"></a>
+
+
+
+
+    <!-- Poem Writing Section (Hidden initially) -->
+        
+
+
+
+
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+
+
+
+    <div class="mini-song-player">
+        <button id="playPauseButton">🎵 Play</button>
+        <audio id="song" src="https://open.spotify.com/track/0OFibcplH8IVfjsGIt7RwO?si=6lmBMCs_RPqLmVuwnnMV6A&utm_source=copy-link"></audio>
     </div>
+
+
+
+
+
+
+
+
+
 </body>
-</html>
-
-
-
-
-
-
 
 
 
 
 <style>
 
-
-
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffcccb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #f11136;
     text-align: center;
+  }
+  
+  .container, .poem-writing {
+    padding: 20px;
+  }
+
+
+
+
+  music-section {
+    margin-bottom: 40px;
 }
 
-.container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
 
-h1 {
-    font-size: 3em;
-    color: #e63946;
-}
-
-.message {
-    font-size: 1.2em;
-    color: #555;
-    margin: 20px 0;
-}
-
-.heart-container {
-    margin: 30px 0;
-}
-
-.heart {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: relative;
-    transform: rotate(-45deg);
-    margin: 0 auto;
-    animation: beat 1s infinite;
-}
-
-.heart::before,
-.heart::after {
-    content: '';
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-}
-
-.heart::before {
-    top: -50px;
-    left: 0;
-}
-
-.heart::after {
-    left: 50px;
-    top: 0;
-}
-
-@keyframes beat {
-    0%, 100% {
-        transform: scale(1) rotate(-45deg);
-    }
-    50% {
-        transform: scale(1.1) rotate(-45deg);
-    }
-}
-
-.btn {
-    padding: 10px 20px;
-    background-color: #e63946;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #d62828;
-}
-
-#surprise {
-    margin-top: 30px;
-}
-
-.hidden {
-    display: none;
-}
-
-.poem {
-    font-size: 1.4em;
-    color: #555;
+  
+  header h1 {
+    font-size: 2.5em;
     margin-top: 20px;
+  }
+  
+  .surprise, .wishes, .song {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(15, 3, 3, 0.2);
+    border-radius: 10px;
+  }
+  
+  .surprise button, #showPoemButton, #backButton {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #780811;
+    color: #080202;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+
+  <style>
+
+  .mini-song-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    background: #ffebcd;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.mini-song-player button {
+    background-color: #ff4757;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.mini-song-player button:focus {
+    outline: none;
+}
+
+
+
 </style>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+// Function for floating balloons effect
+function createBalloons() {
+  const balloonBackground = document.getElementById('balloonBackground');
+  for (let i = 0; i < 30; i++) {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.animationDuration = Math.random() * 2 + 3 + 's';
+      balloonBackground.appendChild(balloon);
+  }
+}
+
+window.onload = createBalloons; // Call the balloon function on load
+
+// Surprise button functionality
+document.getElementById('surpriseButton').addEventListener('click', function() {
+  document.querySelector('.container').style.display = 'none'; // Hide main container
+  document.getElementById('poemWriting').style.display = 'block'; // Show poem writing section
+});
+
+// Show the poem when the button is clicked
+document.getElementById('showPoemButton').addEventListener('click', function() {
+  const poemText = document.getElementById('poemInput').value;
+  const displayPoem = document.getElementById('displayPoem');
+  displayPoem.innerHTML = <h3>Your Poem:</h3><p>${poemText}</p>;
+  displayPoem.style.display = 'block';
+});
+
+// Back button to return to the main page
+document.getElementById('backButton').addEventListener('click', function() {
+  document.getElementById('poemWriting').style.display = 'none'; // Hide poem writing section
+  document.querySelector('.container').style.display = 'block'; // Show main container
+});
+
+
+</script>
+
+
+<script>
+
+// Select the button and audio elements
+const playPauseButton = document.getElementById('playPauseButton');
+const song = document.getElementById('song');
+
+// Play/pause the song when the button is clicked
+playPauseButton.addEventListener('click', function() {
+    if (song.paused) {
+        song.play();
+        playPauseButton.textContent = '⏸ Pause';
+    } else {
+        song.pause();
+        playPauseButton.textContent = '🎵 Play';
+    }
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
